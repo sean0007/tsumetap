@@ -13,7 +13,7 @@ const noto = Noto_Sans_JP({
 const SITE_URL = "https://tsumetap.vercel.app";
 const TITLE = "ツメタップ｜ジェルネイルのままタッチパネルを操作";
 const DESCRIPTION =
-  "ジェルネイルの爪先はレジやオーダー用iPad、スマホに反応しません。爪先にかぶせる導電キャップ「ツメタップ」を開発中。試作品のお知らせを受け取るウェイトリスト。";
+  "ジェルネイルの爪先はレジやオーダー用iPad、スマホに反応しません。ジェル施術でお好きな1本に金の導電ラインを封入する「ツメタップ」を開発中。テスト施術のお知らせを受け取るウェイトリスト。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -3,13 +3,18 @@ export function NailIllustration({ className = "" }: { className?: string }) {
     <svg
       viewBox="0 0 270 240"
       role="img"
-      aria-label="指先のジェルネイルに導電キャップをかぶせたイメージ図"
+      aria-label="ジェルネイルの中に金の導電ラインを封入したイメージ図"
       className={className}
     >
       <defs>
         <linearGradient id="nail" x1="0" x2="0" y1="0" y2="1">
           <stop offset="0" stopColor="#f3b9c4" />
           <stop offset="1" stopColor="#d97b92" />
+        </linearGradient>
+        <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stopColor="#f6dd8a" />
+          <stop offset=".5" stopColor="#d4a93c" />
+          <stop offset="1" stopColor="#a87b1e" />
         </linearGradient>
       </defs>
       {/* finger */}
@@ -23,29 +28,24 @@ export function NailIllustration({ className = "" }: { className?: string }) {
         fill="url(#nail)"
       />
       <path d="M104 40 C108 28 114 20 120 16" stroke="#fff" strokeOpacity=".6" strokeWidth="4" fill="none" strokeLinecap="round" />
-      {/* conductive cap over the tip */}
+      {/* gold tip band at the free edge */}
       <path
-        d="M101 34 C104 22 112 12 120 8 C128 12 136 22 139 34 C128 40 112 40 101 34 Z"
-        fill="#4a3a40"
+        d="M106 26 C110 18 115 12 120 9 C125 12 130 18 134 26 C126 30 114 30 106 26 Z"
+        fill="url(#gold)"
       />
-      <circle cx="120" cy="9" r="6" fill="#4a3a40" />
-      {/* tab under the nail reaching the skin (dashed = hidden) */}
-      <path
-        d="M120 38 V112"
-        stroke="#4a3a40"
-        strokeWidth="5"
-        strokeDasharray="7 6"
-        strokeLinecap="round"
-      />
-      <circle cx="120" cy="118" r="7" fill="#c4566e" />
-      <circle cx="120" cy="118" r="13" fill="none" stroke="#c4566e" strokeOpacity=".4" strokeWidth="3" />
+      {/* gold strip sealed in the gel, running to the skin */}
+      <path d="M120 28 V114" stroke="url(#gold)" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="120" cy="118" r="6" fill="url(#gold)" />
+      <circle cx="120" cy="118" r="13" fill="none" stroke="#d4a93c" strokeOpacity=".45" strokeWidth="3" />
       {/* labels */}
       <g fontSize="11" fill="#2b2024" fontFamily="inherit">
-        <line x1="140" y1="22" x2="182" y2="22" stroke="#7a666c" />
-        <text x="185" y="26">導電キャップ</text>
+        <line x1="134" y1="20" x2="182" y2="20" stroke="#7a666c" />
+        <text x="185" y="24">爪先の金</text>
+        <line x1="124" y1="70" x2="182" y2="80" stroke="#7a666c" />
+        <text x="185" y="84">ジェルに封入した</text>
+        <text x="185" y="98">金のライン</text>
         <line x1="128" y1="118" x2="182" y2="140" stroke="#7a666c" />
-        <text x="185" y="144">肌に触れる</text>
-        <text x="185" y="158">タブ</text>
+        <text x="185" y="144">指の肌に触れる</text>
       </g>
     </svg>
   );

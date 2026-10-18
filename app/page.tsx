@@ -11,7 +11,7 @@ const problems = [
 const audiences = [
   {
     title: "ネイルサロンのお客様",
-    body: "長さのあるジェルネイルでも、スマホやタッチパネルを爪先でそのまま操作したい方に。",
+    body: "長さのあるジェルネイルでも、スマホやタッチパネルを爪先でそのまま操作したい方に。仕込むのはお好きな指の1本だけ。",
   },
   {
     title: "バー・飲食店スタッフ",
@@ -19,7 +19,7 @@ const audiences = [
   },
   {
     title: "ネイリスト・サロン",
-    body: "施術後のオプションとしてご提案できる形を検討中。サロン向けのご意見も歓迎です。",
+    body: "いつものジェル施術に追加できるメニューとして準備中。テスト施術にご協力いただけるサロンも募集予定です。",
   },
 ];
 
@@ -34,11 +34,15 @@ const faqs = [
   },
   {
     q: "ネイルは傷つきませんか？",
-    a: "接着剤を使わず、爪先にかぶせて外せる形を目指しています。試作品で装着感や外しやすさを確認していきます。",
+    a: "金のラインはクリアジェルの中に封入し、オフもいつものジェルと同じ方法を想定しています。耐久性や仕上がりはテスト施術で確認していきます。",
+  },
+  {
+    q: "金属アレルギーがあっても大丈夫？",
+    a: "金でもアレルギーが出る方はいます。施術前にネイリストへご相談ください。肌に触れる部分はごく小さくする設計で、テストでも肌の状態を確認していきます。",
   },
   {
     q: "登録すると何が届きますか？",
-    a: "試作品の完成、テスト参加の募集、発売時期などのお知らせです。頻繁な配信はしません。",
+    a: "テスト施術の募集、対応サロンの情報、提供開始時期などのお知らせです。頻繁な配信はしません。",
   },
 ];
 
@@ -65,17 +69,17 @@ export default function Home() {
           爪先でタップ。
         </h1>
         <p className="mx-auto mt-4 max-w-md text-[0.95rem] leading-8 text-muted">
-          爪先にかぶせるだけの導電キャップ。レジ、オーダー用iPad、スマホを、ネイルを伸ばしたまま操作できるようにします。
+          ジェルネイルの施術中に、ネイリストがお好きな1本の爪へ金の導電ラインを封入。その指の爪先だけで、レジ、オーダー用iPad、スマホをいつでも操作できるようにします。
         </p>
         <NailIllustration className="mx-auto mt-6 w-72 sm:w-80" />
         <a
           href="#waitlist"
           className="mt-6 inline-block w-full rounded-full bg-rose px-6 py-3.5 font-bold text-white shadow-sm sm:w-auto"
         >
-          試作品のお知らせを受け取る
+          テスト施術のお知らせを受け取る
         </a>
         <p className="mt-4 text-xs text-muted" lang="en">
-          A slip-on conductive nail cap so gel nails can tap touchscreens. Join the waitlist.
+          During your gel appointment, a nail artist seals a gold conductive strip into one nail of your choice, so that fingertip always works on touchscreens. Join the waitlist.
         </p>
       </section>
 
@@ -100,9 +104,9 @@ export default function Home() {
         <h2 className="text-xl font-bold">しくみはシンプル</h2>
         <ol className="mt-5 grid gap-4">
           {[
-            ["1", "爪先にかぶせる", "導電素材の小さなキャップを、ネイルの先にスッと装着。"],
-            ["2", "タブが肌に触れる", "キャップから伸びるタブが指の肌に触れ、電気の通り道をつくります。"],
-            ["3", "爪先でタップ", "画面に当たるのはキャップの先端。指の腹に持ち替えずに操作できます。"],
+            ["1", "1本を選ぶ", "ジェル施術のとき、タッチ用にしたい指を1本お選びいただきます。"],
+            ["2", "金のラインを封入", "ネイリストが金の導電ラインをジェルの中に仕込み、爪先と指の肌をつなぐ電気の通り道をつくります。"],
+            ["3", "爪先でタップ", "画面に当たるのは爪先の金の部分。次のオフまで、指の腹に持ち替えずに操作できます。"],
           ].map(([n, t, b]) => (
             <li key={n} className="flex gap-4">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-rose text-sm font-bold text-white">
@@ -126,7 +130,7 @@ export default function Home() {
           </span>
           <p className="mt-3 font-bold">近日公開</p>
           <p className="mt-1 px-6 text-xs leading-6 text-muted">
-            試作品で実際のレジ・iPadを操作する様子をお見せする予定です。
+            テスト施術したネイルで実際のレジ・iPadを操作する様子をお見せする予定です。
           </p>
         </div>
       </section>
@@ -148,7 +152,7 @@ export default function Home() {
       <section className="mt-16 scroll-mt-6" id="waitlist">
         <h2 className="text-xl font-bold">ウェイトリストに登録</h2>
         <p className="mt-2 mb-5 text-sm leading-7 text-muted">
-          試作品の完成やテスト参加の募集をメールでお知らせします。登録は無料、販売や決済はありません。
+          テスト施術の募集や対応サロンの情報をメールでお知らせします。登録は無料、販売や決済はありません。
         </p>
         <WaitlistForm />
       </section>
