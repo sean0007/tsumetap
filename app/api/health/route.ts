@@ -1,0 +1,10 @@
+import { NextResponse } from "next/server";
+
+export const dynamic = "force-dynamic";
+
+export function GET() {
+  return NextResponse.json(
+    { ok: true, storageConfigured: Boolean(process.env.BLOB_READ_WRITE_TOKEN) },
+    { headers: { "Cache-Control": "no-store" } },
+  );
+}
