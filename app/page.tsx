@@ -67,7 +67,7 @@ export default function Home() {
         <p className="mx-auto mt-4 max-w-md text-[0.95rem] leading-8 text-muted">
           爪先にかぶせるだけの導電キャップ。レジ、オーダー用iPad、スマホを、ネイルを伸ばしたまま操作できるようにします。
         </p>
-        <NailIllustration className="mx-auto mt-6 w-64 sm:w-72" />
+        <NailIllustration className="mx-auto mt-6 w-72 sm:w-80" />
         <a
           href="#waitlist"
           className="mt-6 inline-block w-full rounded-full bg-rose px-6 py-3.5 font-bold text-white shadow-sm sm:w-auto"

@@ -1,7 +1,7 @@
 export function NailIllustration({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 240 240"
+      viewBox="0 0 270 240"
       role="img"
       aria-label="指先のジェルネイルに導電キャップをかぶせたイメージ図"
       className={className}
