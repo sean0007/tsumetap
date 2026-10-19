@@ -1,6 +1,6 @@
 # ツメタップ / TsumeTap — waitlist
 
-Japanese waitlist page for a slip-on conductive nail cap (gel nails → touchscreens).
+Japanese waitlist page for a gold conductive strip a nail artist seals into one gel nail during the appointment, so that fingertip works on touchscreens.
 Waitlist only: no prices, no payments, no Stripe.
 
 Live: https://tsumetap.vercel.app
